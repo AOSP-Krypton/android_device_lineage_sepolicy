@@ -10,20 +10,20 @@ endif
 endif
 
 SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += \
-    device/krypton/sepolicy/common/public
+    device/kosp/sepolicy/common/public
 
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += \
-    device/krypton/sepolicy/common/private
+    device/kosp/sepolicy/common/private
 
 ifeq ($(TARGET_USES_PREBUILT_VENDOR_SEPOLICY), true)
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += \
-    device/krypton/sepolicy/common/dynamic \
-    device/krypton/sepolicy/common/system
+    device/kosp/sepolicy/common/dynamic \
+    device/kosp/sepolicy/common/system
 else
 BOARD_VENDOR_SEPOLICY_DIRS += \
-    device/krypton/sepolicy/common/dynamic \
-    device/krypton/sepolicy/common/vendor
+    device/kosp/sepolicy/common/dynamic \
+    device/kosp/sepolicy/common/vendor
 endif
 
 # Selectively include legacy rules defined by the products
--include device/krypton/sepolicy/legacy-common/sepolicy.mk
+-include device/kosp/sepolicy/legacy-common/sepolicy.mk
